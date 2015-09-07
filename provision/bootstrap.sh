@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 install_this() {
   sudo apt-get install "$@"
@@ -18,7 +18,7 @@ sudo apt-get install python-setuptools libapache2-mod-wsgi
 sudo service apache2 restart
 
 
-# install rbenv, ruby, and rails dependencies
+# install rbenv, ruby, python, and rails dependencies
 sudo apt-get install zlib1g-dev
 sudo apt-get install libssl-dev
 sudo apt-get isntall libreadline-dev -y
@@ -28,6 +28,7 @@ sudo apt-get install libxslt1-dev
 sudo apt-get install libcurl4-openssl-dev
 sudo apt-get install python-software-properties
 sudo apt-get install libffi-dev
+sudo apt-get install libbz2-dev ## for python
 
 
 # Install databases:
