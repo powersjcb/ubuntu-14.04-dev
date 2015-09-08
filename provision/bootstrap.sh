@@ -65,14 +65,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y -q
 mysqladmin -u root password foobar
   # login to mysql with "mysql -u root -p"
 
-  # setup postgresql
-sudo apt-get install postgresql -y
+  # setup postgresql (outsourced to new shell script)
+# sudo apt-get install postgresql -y
   # login to postgres with "sudo -i -u postgres"
 
   # install redis
-sudo apt-get install redis-server
+sudo apt-get install redis-server -y
   # install memcached
-sudo apt-get install memcached
+sudo apt-get install memcached -y
 
 # compile and install phantomjs (no .debs available as of 2015/9/7)
 # sudo apt-get install build-essential g++ flex bison gperf ruby perl \

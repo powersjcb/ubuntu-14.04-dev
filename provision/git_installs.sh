@@ -37,14 +37,12 @@ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> "${SHELLRC}"
 source $SHELLRC
 
 # install node version manager
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # install node
 . "${ROOT_DIR}/.nvm/nvm.sh"
-nvm install stable  # run this to install latest stable version of node
-nvm alias default stable
+sudo nvm install stable  # run this to install latest stable version of node
+sudo nvm alias default stable
 
 # install npm
 sudo apt-get install npm -y
-# install npm autocomplete
-npm completion >> "${SHELLRC}"
