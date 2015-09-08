@@ -6,7 +6,7 @@
 
 # shell .rc file route
 ROOT_DIR="/home/vagrant"
-SHELLRC="${ROOT_DIR}/.bashrc"
+SHELLRC="${ROOT_DIR}/.zpreztorc"
 
 # install pyenv and setup path variables
 git clone https://github.com/yyuu/pyenv.git /home/vagrant/.pyenv --depth=1
