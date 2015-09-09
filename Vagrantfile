@@ -15,6 +15,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "provision/postgres_install.sh"
   config.vm.provision :shell, path: "provision/git_installs.sh", privileged: false
 
-  config.vm.synced_folder ".", "/home/vagrant/src"
+  config.vm.synced_folder "../../", "/home/vagrant/app"
 
 end

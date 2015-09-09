@@ -14,7 +14,7 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> "${SHELLRC}"
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> "${SHELLRC}"
 . "${SHELLRC}"
 echo 'eval "$(pyenv init -)"' >> "${SHELLRC}"
-
+. "${SHELLRC}"
 
 # update python 2.7 -> 2.7.10 and dependencies for development
 pyenv install 2.7.10

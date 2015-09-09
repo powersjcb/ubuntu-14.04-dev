@@ -34,7 +34,7 @@ for rcfile in $ROOT_DIR/.zprezto/runcoms/!(README.md); do
 done
 
 sudo usermod -s /bin/zsh vagrant
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 
 # Web server dependencies
@@ -48,7 +48,7 @@ sudo apt-get install nginx
 
 # install rbenv, ruby, python, and rails dependencies
 sudo apt-get install gnupg
-sudo apt-get install libssl-dev -y
+sudo apt-get install libssl-dev
 sudo apt-get install zlib1g-dev
 sudo apt-get isntall libreadline-dev -y
 sudo apt-get install libyaml-dev
@@ -60,8 +60,9 @@ sudo apt-get install libffi-dev
 sudo apt-get install libbz2-dev ## for python
 
 
+
 # Install databases:
-  setup sqlite3 (optional for install rails dependencies)
+  # setup sqlite3 (optional for install rails dependencies)
 sudo apt-get install libsqlite3-dev
 sudo apt-get install sqlite3
 
@@ -101,3 +102,5 @@ sudo apt-get install memcached -y
 # sudo apt-get install build-essential g++ flex bison gperf ruby perl \
 #   libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
 #   libpng-dev libjpeg-dev python libx11-dev libxext-dev
+
+sudo apt-get autoremove -y
