@@ -18,8 +18,8 @@ echo 'eval "$(pyenv init -)"' >> "${SHELLRC}"
 # update python 2.7 -> 2.7.10 and dependencies for development
 pyenv install 2.7.10
 pyenv global 2.7.10
-curl -o- "https://bootstrap.pypa.io/get-pip.py" | python
-pip install virtualenv
+curl -o- "https://bootstrap.pypa.io/get-pip.py" | sudo python
+sudo pip install virtualenv
 # Need to escape $@ so that it can be passed into passed into bashrc
 cat <<EOT >> "${SHELLRC}"
 gpip(){
@@ -41,8 +41,11 @@ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.s
 
 # install node
 . "${ROOT_DIR}/.nvm/nvm.sh"
-sudo nvm install stable  # run this to install latest stable version of node
-sudo nvm alias default stable
+nvm install stable  # run this to install latest stable version of node
+nvm alias default stable
 
 # install npm
 sudo apt-get install npm -y
+
+git clone https://github.com/powersjcb/dotfiles $ROOT_DIR/.dotfiles
+# sh $ROOT_DIR/.dotfiles/symlink_files.sh

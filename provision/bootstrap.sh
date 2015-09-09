@@ -43,8 +43,8 @@ sudo service apache2 restart
 
 # install rbenv, ruby, python, and rails dependencies
 sudo apt-get install gnupg
+sudo apt-get install libssl-dev -y
 sudo apt-get install zlib1g-dev
-sudo apt-get install libssl-dev
 sudo apt-get isntall libreadline-dev -y
 sudo apt-get install libyaml-dev
 sudo apt-get install libxml2-dev
