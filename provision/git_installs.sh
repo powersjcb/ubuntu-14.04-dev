@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 # TODO: setup git account information
 # do it!
@@ -14,6 +14,7 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> "${SHELLRC}"
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> "${SHELLRC}"
 . "${SHELLRC}"
 echo 'eval "$(pyenv init -)"' >> "${SHELLRC}"
+
 
 # update python 2.7 -> 2.7.10 and dependencies for development
 pyenv install 2.7.10
@@ -48,4 +49,4 @@ nvm alias default stable
 sudo apt-get install npm -y
 
 git clone https://github.com/powersjcb/dotfiles $ROOT_DIR/.dotfiles
-# sh $ROOT_DIR/.dotfiles/symlink_files.sh
+sh $ROOT_DIR/.dotfiles/symlink_files.sh
